@@ -23,6 +23,7 @@
     "@anthropic-ai/sdk": "^0.101.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "firecrawl": "^4.25.3",
     "openai": "^6.42.0"
   },
   "devDependencies": {

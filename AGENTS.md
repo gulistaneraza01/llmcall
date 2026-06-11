@@ -19,15 +19,15 @@ pnpm dev          # nodemon → http://localhost:8000
 
 ESM-only Node.js/Express 5 app routing LLM requests through OpenRouter.
 
-| Path | Role |
-|---|---|
-| `src/index.js` | Express setup, port, mounts routes at `/api/v1/ai` |
-| `src/router/llm.js` | `POST /chat` → controller |
-| `src/controller/llm.js` | Builds prompt, calls OpenAI SDK (via OpenRouter) |
-| `src/lib/openai.js` | OpenAI client pointed at `https://openrouter.ai/api/v1` |
-| `src/lib/anthropicClient.js` | Anthropic client (same base URL, currently unused) |
-| `src/utils/constraints.js` | `dotenv` config loader, exports env vars |
-| `src/utils/tryCatch.js` | Async error wrapper → 500 + `{ error }` |
+| Path                         | Role                                                    |
+| ---------------------------- | ------------------------------------------------------- |
+| `src/index.js`               | Express setup, port, mounts routes at `/api/v1/ai`      |
+| `src/router/llm.js`          | `POST /chat` → controller                               |
+| `src/controller/llm.js`      | Builds prompt, calls OpenAI SDK (via OpenRouter)        |
+| `src/lib/openai.js`          | OpenAI client pointed at `https://openrouter.ai/api/v1` |
+| `src/lib/anthropicClient.js` | Anthropic client (same base URL, currently unused)      |
+| `src/utils/constraints.js`   | `dotenv` config loader, exports env vars                |
+| `src/utils/tryCatch.js`      | Async error wrapper → 500 + `{ error }`                 |
 
 Only `openai.js` is wired into the controller. `anthropicClient.js` is imported nowhere.
 
