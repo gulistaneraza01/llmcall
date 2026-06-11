@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'type-enum': [
@@ -21,7 +21,7 @@ module.exports = {
     'subject-case': [
       2,
       'never',
-      ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
+      ['sentence-case', 'pascal-case', 'upper-case'],
     ],
     'header-max-length': [2, 'always', 100],
   },
